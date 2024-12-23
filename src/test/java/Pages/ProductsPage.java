@@ -8,9 +8,12 @@ public class ProductsPage {
     WebDriver driver;
 
     By title = By.cssSelector("[data-test=title]");
-    By backpackButton = By.id("add-to-cart-sauce-labs-backpack");
+    By backpackButton = By.cssSelector("[data-test=add-to-cart-sauce-labs-backpack]");
+    By bikeButton = By.cssSelector("[data-test=add-to-cart-sauce-labs-bike-light]");
+    By tShirtButton = By.cssSelector("[data-test=add-to-cart-sauce-labs-bolt-t-shirt]");
+    By fleeceJacketButton = By.cssSelector("[data-test=add-to-cart-sauce-labs-fleece-jacket]");
     By cartButton = By.cssSelector("[data-test=shopping-cart-badge]");
-    By backpackCard = By.id("item_4_title_link");
+    By backpackCard = By.cssSelector("[data-test=inventory-item-name]");
 
     public ProductsPage(WebDriver driver) {
         this.driver = driver;
@@ -22,6 +25,18 @@ public class ProductsPage {
 
     public void addBackpack() {
         driver.findElement(backpackButton).click();
+    }
+
+    public void addBike() {
+        driver.findElement(bikeButton).click();
+    }
+
+    public void addTShirt() {
+        driver.findElement(tShirtButton).click();
+    }
+
+    public void addFleeceJacket() {
+        driver.findElement(fleeceJacketButton).click();
     }
 
     public void openCart() {

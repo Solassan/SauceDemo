@@ -17,7 +17,7 @@ public class AddProductFromCardTest extends BaseTest {
                 "Your Cart",
                 "Не удалось перейти в корзину");
         Assert.assertEquals(
-                cartPage.getItem(),
+                cartPage.getItemBackPack(),
                 "Sauce Labs Backpack",
                 "Не удалось добавить рюкзак в корзину");
     }

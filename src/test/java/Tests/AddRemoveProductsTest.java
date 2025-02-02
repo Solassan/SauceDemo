@@ -1,11 +1,20 @@
 package Tests;
 
+import io.qameta.allure.*;
+import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AddRemoveProductsTest extends BaseTest {
 
-    @Test
+    @Test(testName = "Проверка удаления товара из корзины")
+    @Description("Проверка удаления товара из корзины")
+    @Severity(SeverityLevel.CRITICAL)
+    @Epic("Saucedemo-1.0")
+    @Feature("add to cart in saucedemo")
+    @Story("Удаление из корзины")
+    @TmsLink("www.jira.com/ITM-3")
+    @Issue("www.jira.com/ITM-6")
     public void addRemoveProducts() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");

@@ -1,5 +1,6 @@
 package Pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -27,6 +28,7 @@ public class CartPage {
         return driver.findElement(itemBackPack).getText();
     }
 
+    @Step("Удаление из корзины товара backPack")
     public void getRemoveBackBack() {
         driver.findElement(removeBackPack).click();
     }
@@ -35,6 +37,7 @@ public class CartPage {
         return driver.findElement(itemTShirt).getText();
     }
 
+    @Step("Удаление из корзины товара t-shirt")
     public void getRemoveTShirt() {
         driver.findElement(removeTShirt).click();
     }
